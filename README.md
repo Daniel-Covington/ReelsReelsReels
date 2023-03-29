@@ -5,7 +5,7 @@ User Story for ReelsReelsReels
 * As a user I want to search for movies and get details about the movie with access to a trailer.
 * This application uses youtube API and OMDB API
 * 
-
+ 
 
 ##  Links
 
