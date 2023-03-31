@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./Assets/css/reset.css" />
   <link rel="stylesheet" href="./Assets/css/style.css" />
@@ -15,13 +13,16 @@
 
 <body class="deep-purple lighten-5">
   <h1 class="container center-align black white-text">ReelsReelsReels</h1>
-  <h4 class="row col s4 pull-8 left-align white-text">Movie Search</h4>
-  <input class="container" type="text" id="search-input" placeholder="Search for a movie...">
-  <button onclick="searchMovie()">Search</button>
-  
+  <div class="row">
+    <h4 class="col s1 white-text">Movie Search</h4>
+    <input class="col s2" type="text" id="search-input" placeholder="Search for a movie...">
+    <button onclick="searchMovie()">Search</button>
+  </div>
   <div class="container center-align" id="movie-details"></div>
   <div class="container center-align" id="movie-trailer"></div>
-  <script src="./assets/js/script.js"></script>
+  <script src="./Assets/js/script.js"></script>
 </body>
+
+
 
 </html>
