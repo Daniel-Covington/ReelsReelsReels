@@ -1,7 +1,7 @@
 async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
-  const omdbUrl = `http://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
+  const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
   const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
   try {
     const omdbResponse = await fetch(omdbUrl);
