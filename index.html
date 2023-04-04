@@ -7,22 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>ReelsReelsReels</title>
 </head>
 
-<body class="deep-purple accent-4">
+<body class="cyan accent-4">
+
+<Header>
   <div class="row">
-    <h1 class="container center-align black white-text">ReelsReelsReels</h1>
-    <h4 class="col s1 white-text">Movie Search</h4>
+    <h1 class="container left-align white-text">ReelsReelsReels</h1>
+    <h4 class="col s1 white-text left-align">Movie Search</h4>
     <input class="col s2" type="text" id="search-input" placeholder="Search for a movie...">
-    <button onclick="searchMovie()">Search</button>
+    <button class= "button is-primary  is-large " onclick="searchMovie()">Search</button>
   </div>
 
+  </Header>
+  
   <div class="container center-align" id="movie-details"></div>
   <div class="container center-align" id="movie-trailer"></div>
+
+
   <script src="./assets/js/script.js"></script>
 </body>
 
