@@ -5,51 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>ReelsReelsReels</title>
 </head>
 
-<body class="cyan accent-4">
-
-<Header>
+<body class="deep-purple accent-4">
   <div class="row">
-    <h1 class="container left-align white-text">ReelsReelsReels</h1>
-    <h4 class="col s1 white-text left-align">Movie Search</h4>
+    <h1 class="container center-align black white-text">ReelsReelsReels</h1>
+    <h4 class="col s1 white-text">Movie Search</h4>
     <input class="col s2" type="text" id="search-input" placeholder="Search for a movie...">
-    <button class= "button is-primary .search" onclick="searchMovie()">Search</button>
+    <button onclick="searchMovie()">Search</button>
   </div>
 
-  </Header>
-  
   <div class="container center-align" id="movie-details"></div>
   <div class="container center-align" id="movie-trailer"></div>
-
-    <div class="demo-container"></div>
-    <div class="modal">
-        <h1> Edit your statement </h1>
-          <div class="modal-input"></div>
-          <textarea rows="3"></textarea>
-    </div>
-      <div class="modal-actions"></div>
-        <button type="button" class="btn-cancel"> Cancel</button>
-        <button type="button" class="btn-confirm"> Confirm</button>
-      </div>
-
-
-    <div class="demo-container" >
-    <div class="modal-control">
-      <p id="quote"></p>
-        <button type="button"> edit value</button>
-        </div>
-      </div>
-
-
   <script src="./assets/js/script.js"></script>
 </body>
 
