@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>ReelsReelsReels</title>
+</head>
+
+<body class="grey darken-3" onload="fetchPopularTrailers()">
+  <div class="row">
+    <header class="font-1">
+      <h1 class="container col s3 red accent-4 white-text">ReelsReelsReels</h1>
+    </header>
+    <h4 class="col s1 offset-s1 white-text">Movie Search</h4>
+    <input class="col s1 grey darken-2 white-text" type="text" id="search-input" placeholder="Search for a movie...">
+    <button onclick="searchMovie()">Search</button>
+  </div>
+
+ 
+  <div class="container center-align white-text" id="movie-details"></div>
+  <div class="container center-align white-text" id="movie-trailer"></div>
+  <div class="container center-align" id="search-results"></div>
+  <div class="container center-align" id="popular-trailers">
+    <h2 class="white-text">Popular Movie Trailers</h2>
+    <div id="trailers-container"></div>
+   </div>
+  
+
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
