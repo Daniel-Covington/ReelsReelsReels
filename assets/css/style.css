@@ -14,6 +14,14 @@ body{
     flex-direction: column;
 }
 
+h4{ 
+    font-size: 16px;
+}
+
+.search{
+    font-size: 15;
+}
+
 .txtbox{
     background-color: white;
 
@@ -33,5 +41,9 @@ body{
 .moviediv{
     text-align: center;
     
+}
 
+.demo-container {
+    width: 200px;
+    height: 200px;
 }

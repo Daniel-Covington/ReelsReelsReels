@@ -22,13 +22,32 @@
     <h1 class="container left-align white-text">ReelsReelsReels</h1>
     <h4 class="col s1 white-text left-align">Movie Search</h4>
     <input class="col s2" type="text" id="search-input" placeholder="Search for a movie...">
-    <button class= "button is-primary  is-large " onclick="searchMovie()">Search</button>
+    <button class= "button is-primary .search" onclick="searchMovie()">Search</button>
   </div>
 
   </Header>
   
   <div class="container center-align" id="movie-details"></div>
   <div class="container center-align" id="movie-trailer"></div>
+
+    <div class="demo-container"></div>
+    <div class="modal">
+        <h1> Edit your statement </h1>
+          <div class="modal-input"></div>
+          <textarea rows="3"></textarea>
+    </div>
+      <div class="modal-actions"></div>
+        <button type="button" class="btn-cancel"> Cancel</button>
+        <button type="button" class="btn-confirm"> Confirm</button>
+      </div>
+
+
+    <div class="demo-container" >
+    <div class="modal-control">
+      <p id="quote"></p>
+        <button type="button"> edit value</button>
+        </div>
+      </div>
 
 
   <script src="./assets/js/script.js"></script>
