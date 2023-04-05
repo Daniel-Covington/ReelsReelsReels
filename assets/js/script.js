@@ -2,7 +2,7 @@ async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=02&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
   try {
     const omdbResponse = await fetch(omdbUrl);
     const omdbData = await omdbResponse.json();
@@ -44,7 +44,6 @@ function displaySearchResults(searchResults) {
   searchResultsContainer.innerHTML = searchResultThumbnails;
 }
 
-
 function displayMovieDetails(movieData) {
   const movieDetails = document.getElementById('movie-details');
   movieDetails.innerHTML = `
@@ -54,7 +53,6 @@ function displayMovieDetails(movieData) {
     <p>Plot: ${movieData.Plot}</p>
   `;
 }
-
 
 function displayTrailer(videoId) {
   const movieTrailer = document.getElementById('movie-trailer');
@@ -66,7 +64,7 @@ function displayTrailer(videoId) {
 
 // Load in top current trailers at page load
 async function fetchPopularTrailers() {
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=02&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
 
   try {
     const youtubeResponse = await fetch(youtubeUrl);
