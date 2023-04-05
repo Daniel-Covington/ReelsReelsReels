@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e52f09859e614479c62d1e93c9790a9e1cc46f77
 *,
 *:before,
 *:after {
@@ -6,18 +9,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 html {
   height: 100%;
 }
 
+=======
+html {
+  height: 100%;
+}
+>>>>>>> e52f09859e614479c62d1e93c9790a9e1cc46f77
 body {
   min-height: 100%;
   line-height: 1;
   font-family: sans-serif;
 }
+<<<<<<< HEAD
 
 ​h1,
+=======
+h1,
+>>>>>>> e52f09859e614479c62d1e93c9790a9e1cc46f77
 h2,
 h3,
 h4,
@@ -25,8 +38,12 @@ h5,
 h6 {
   font-size: 100%;
 }
+<<<<<<< HEAD
 
 ​input,
+=======
+input,
+>>>>>>> e52f09859e614479c62d1e93c9790a9e1cc46f77
 select,
 option,
 optgroup,
@@ -37,6 +54,7 @@ code {
   font-size: 100%;
   font-family: inherit;
 }
+<<<<<<< HEAD
 
 ​ol,
 ul {
@@ -44,3 +62,20 @@ ul {
 }
 =======
 >>>>>>> cbb7af0fa2e28fd4ed19c13d1c864bb1343cfeb4
+=======
+ol,
+ul {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> e52f09859e614479c62d1e93c9790a9e1cc46f77
