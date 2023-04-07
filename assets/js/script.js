@@ -79,43 +79,43 @@ function displayMovieDetails(movieData) {
 }
 
 
-// function displayTrailer(videoId) {
-//   const movieTrailer = document.getElementById('movie-trailer');
-//   movieTrailer.innerHTML = `
-//     <h2>Trailer</h2>
-//     <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   `;
-// }
+function displayTrailer(videoId) {
+  const movieTrailer = document.getElementById('movie-trailer');
+  movieTrailer.innerHTML = `
+    <h2>Trailer</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  `;
+}
 
-// Load in top current trailers at page load
-// async function fetchPopularTrailers() {
-//   const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
+Load in top current trailers at page load
+async function fetchPopularTrailers() {
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
 
-//   try {
-//     const youtubeResponse = await fetch(youtubeUrl);
-//     const youtubeData = await youtubeResponse.json();
-//     displayPopularTrailers(youtubeData.items);
-//   } catch (error) {
-//     console.error('Error fetching data:', error);
-//   }
-// }
+  try {
+    const youtubeResponse = await fetch(youtubeUrl);
+    const youtubeData = await youtubeResponse.json();
+    displayPopularTrailers(youtubeData.items);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
 
-// function displayPopularTrailers(trailers) {
-//   const trailersContainer = document.getElementById('trailers-container');
-//   let trailerThumbnails = '';
+function displayPopularTrailers(trailers) {
+  const trailersContainer = document.getElementById('trailers-container');
+  let trailerThumbnails = '';
 
-//   trailers.forEach(trailer => {
-//     trailerThumbnails += `
-//       <div style="display: inline-block; margin: 5px;">
-//         <a href="https://www.youtube.com/watch?v=${trailer.id}" target="_blank">
-//           <img src="${trailer.snippet.thumbnails.medium.url}" alt="${trailer.snippet.title}">
-//         </a>
-//       </div>
-//     `;
-//   });
+  trailers.forEach(trailer => {
+    trailerThumbnails += `
+      <div style="display: inline-block; margin: 5px;">
+        <a href="https://www.youtube.com/watch?v=${trailer.id}" target="_blank">
+          <img src="${trailer.snippet.thumbnails.medium.url}" alt="${trailer.snippet.title}">
+        </a>
+      </div>
+    `;
+  });
 
-//   trailersContainer.innerHTML = trailerThumbnails;
-// }
+  trailersContainer.innerHTML = trailerThumbnails;
+}
 
 
 
