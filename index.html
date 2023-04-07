@@ -18,20 +18,24 @@
 
 <body class="grey darken-3" onload="fetchPopularTrailers()">
   <div class="row">
+
     <header class="font-1">
       <h1 class="container col s3 red accent-4 white-text">ReelsReelsReels</h1>
     </header>
     
-    <input class="col s1 grey darken-2 white-text" onclick="showSearchHistory()" type="text" id="search-input" placeholder="Search for a movie...">
+    <input id="search-input" class="col s1 grey darken-2 white-text" type="text"  placeholder="Search for a movie...">
 
-      <button class="glow-on-hover" onclick="searchMovie()">Hover for Colors...Stay for the Movie Trailer!</button>
+    <button class="glow-on-hover" onclick="searchMovie()">Hover for Colors...Stay for the Movie Trailer!</button>
 
-      
+    <div class="history-1">
+      <div class="history-2">
+        <h3>Search History</h3>
+        <div id="history-text"></div>
+      </div>
+    </div>
 
-  
-  
 
- 
+
   <div class="container center-align white-text" id="movie-details"></div>
   <div class="container center-align white-text" id="movie-trailer"></div>
   <div class="container center-align" id="search-results"></div>
@@ -51,16 +55,6 @@
     </div>
   </div>
 
-   <!-- Secondary Modal for Local Storage & search history -->
-
-   <!-- The Modal Y'all -->
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>LOCAL STORAGE APPENDING SITE</p>
-      </div>
-    </div>
 
 
   <script src="./assets/js/script.js"></script>

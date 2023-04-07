@@ -1,14 +1,28 @@
 // local storage //
-
-var history = [];
+// variable declaration
+var pTag = document.getElementById('history-text');
+var input = document.getElementById('search-input');
+let history = [];
 
 // Store the object into storage
 
 function showSearchHistory() {
 
-  localStorage.setItem("history", JSON.stringify(history));
+console.log(history);
+var inputData = input.value;
 
-  var localHistory = localStorage.getItem("history");
+history.push(inputData);
+console.log(inputData);
+localStorage.setItem("history", JSON.stringify(history));
+
+
+  var localHistory = JSON.parse(localStorage.getItem("history"));
+
+  for (var i = 0; i < localHistory.length; i++) {
+    var populate = document.createElement("p");
+    populate.textContent = localHistory[i];
+    pTag.appendChild(populate);
+  }
   
 }
 
@@ -37,6 +51,7 @@ window.onclick = function(event) {
 // End elements for the Modal Y'all //
 
 async function searchMovie() {
+  showSearchHistory();
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
@@ -109,7 +124,7 @@ async function fetchPopularTrailers() {
   try {
     const youtubeResponse = await fetch(youtubeUrl);
     const youtubeData = await youtubeResponse.json();
-    displayPopularTrailers(youtubeData.items);
+    // displayPopularTrailers(youtubeData.items);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
