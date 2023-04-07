@@ -47,6 +47,10 @@ body {
   border-radius: 10px;
 }
 
+.searchbar {
+  color: #fefefe;
+}
+
 .glow-on-hover:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -117,7 +121,7 @@ body {
   margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 30%; 
 }
 
 /* The Close Button */
@@ -288,16 +292,33 @@ code {
 ul {
   list-style: none;
 }
-@media screen and (max-width: 992px) {
-
-}
-
 
 @media screen and (max-width: 768px) {
-
+  .responsive-iframe {
+    height: 350px;
+    width: 400px;
+  }
+  .trailer-thumbnail {
+    width: 160px;
+    height: 90px;
+  }
 }
 
-
-@media screen and (max-width: 576px) {
- 
+@media screen and (max-width: 320px) {
+  .responsive-iframe {
+    height: 150px;
+    width: 300px;
+  }
+  .trailer-thumbnail {
+    margin: 5px;
+    display: flexbox;
+    width: 120px;
+    height: 67.5px;
+  }
+  #search-input {
+    width: 80% !important;
+  }
+  header {
+    font-size: large !important;
+  }
 }
