@@ -1,3 +1,26 @@
+.titles-2{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  margin-right: 15px;
+}
+.titles-1{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+}
+.titles-0{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+};
+
+.searchbar{
+  color: white;
+  font-family: 'Satisfy', cursive;
+}
+.font-1{
+  font-family: 'Satisfy', cursive;
+};
 
 html {
   height: 100%;
