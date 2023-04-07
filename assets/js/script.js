@@ -19,7 +19,7 @@ async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=03&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
   try {
     const omdbResponse = await fetch(omdbUrl);
     const omdbData = await omdbResponse.json();
@@ -52,7 +52,6 @@ function displaySearchResults(searchResults) {
       <div style="display: inline-block; margin: 20px;">
         <a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">
           <img class="trailer-thumbnail" src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}">
-          
         </a>
       </div>
     `;
@@ -80,15 +79,15 @@ function displayMovieDetails(movieData) {
 function displayTrailer(videoId) {
   const movieTrailer = document.getElementById('movie-trailer');
   movieTrailer.innerHTML = `
-    <h2>Trailer</h2>
+    <h2 class= "texttrailer">Trailer</h2>
     <iframe class="responsive-iframe" width="1200" height="620" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h2>Related Videos</h2>
+    <h2 class= "texttrailer">Related Videos</h2>
   `;
 }
 
 // Load in top current trailers at page load
 async function fetchPopularTrailers() {
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=02&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=06&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
 
   try {
     const youtubeResponse = await fetch(youtubeUrl);

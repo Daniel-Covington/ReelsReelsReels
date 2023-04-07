@@ -121,7 +121,7 @@ body {
   margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 30%; 
 }
 
 /* The Close Button */
@@ -304,7 +304,6 @@ ul {
   }
 }
 
-
 @media screen and (max-width: 320px) {
   .responsive-iframe {
     height: 150px;
@@ -315,5 +314,11 @@ ul {
     display: flexbox;
     width: 120px;
     height: 67.5px;
+  }
+  #search-input {
+    width: 80% !important;
+  }
+  header {
+    font-size: large !important;
   }
 }
