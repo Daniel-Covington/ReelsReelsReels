@@ -21,12 +21,15 @@
     <header class="font-1">
       <h1 class="container col s3 red accent-4 white-text">ReelsReelsReels</h1>
     </header>
-    <h4 class="col s1 offset-s1 white-text">Movie Search</h4>
-    <input class="col s1 grey darken-2 white-text" type="text" id="search-input" placeholder="Search for a movie...">
+    
+    <input class="col s1 grey darken-2 white-text" onclick="showSearchHistory()" type="text" id="search-input" placeholder="Search for a movie...">
 
       <button class="glow-on-hover" onclick="searchMovie()">Hover for Colors...Stay for the Movie Trailer!</button>
-    
-  </div>
+
+      
+
+  
+  
 
  
   <div class="container center-align white-text" id="movie-details"></div>
@@ -39,7 +42,7 @@
   
 
 
-  <!-- The Modal Y'all -->
+  <!-- The Modals Y'alls-->
   <div id="myModal" class="modal">
   <!-- Modal content -->
     <div class="modal-content">
@@ -47,6 +50,17 @@
       <p>Our engine couldn't quite find a movie trailer under that name...</p>
     </div>
   </div>
+
+   <!-- Secondary Modal for Local Storage & search history -->
+
+   <!-- The Modal Y'all -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>LOCAL STORAGE APPENDING SITE</p>
+      </div>
+    </div>
 
 
   <script src="./assets/js/script.js"></script>

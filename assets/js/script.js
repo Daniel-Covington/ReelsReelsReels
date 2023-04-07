@@ -1,4 +1,23 @@
+// local storage //
+
+var history = [];
+
+// Store the object into storage
+
+function showSearchHistory() {
+
+  localStorage.setItem("history", JSON.stringify(history));
+
+  var localHistory = localStorage.getItem("history");
+  
+}
+
+// End Local Storage //
+
+
+
 // Elements for the Modal Y'all //
+
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -14,6 +33,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// End elements for the Modal Y'all //
 
 async function searchMovie() {
   const searchInput = document.getElementById('search-input');

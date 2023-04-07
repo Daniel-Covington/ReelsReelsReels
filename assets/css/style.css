@@ -16,6 +16,14 @@ body {
   font-family: sans-serif;
 }
 
+.history-card-text {
+  background-color: grey;
+}
+
+.search-history-text {
+  color: mintcream;
+}
+
 /* Rainbow Search Button Animation */
 
 .glow-on-hover {
