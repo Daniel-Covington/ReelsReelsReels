@@ -19,7 +19,8 @@ async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=03&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=03&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyA_uglFhReUs61gcPEwXhfwwFsb31sfVhM`;
+    // Save the search history and update the datalist
   try {
     const omdbResponse = await fetch(omdbUrl);
     const omdbData = await omdbResponse.json();
@@ -41,7 +42,45 @@ async function searchMovie() {
   } catch (error) {
     console.error('Error fetching data:', error);
   }
+  saveSearchHistory(movieTitle);
+  updateSearchHistoryDatalist();
 }
+function saveSearchHistory(searchTerm) {
+  let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+  if (!searchHistory.includes(searchTerm)) {
+    searchHistory.push(searchTerm);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+  }
+}
+
+function updateSearchHistoryDatalist() {
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+  const searchHistoryDatalist = document.getElementById('search-history');
+  let searchHistoryOptions = '';
+
+  searchHistory.forEach(term => {
+    searchHistoryOptions += `<option value="${term}">`;
+  });
+
+  searchHistoryDatalist.innerHTML = searchHistoryOptions;
+}
+
+function updateSearchHistory() {
+  const searchHistory = JSON.parse(localStorage.getItem("searchHistory") || "[]");
+  const searchHistoryDatalist = document.getElementById("search-history");
+  searchHistoryDatalist.innerHTML = "";
+
+  searchHistory.forEach((term) => {
+    const option = document.createElement("option");
+    option.value = term;
+    searchHistoryDatalist.appendChild(option);
+  });
+}
+
+// Call updateSearchHistory() when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  updateSearchHistory();
+});
 
 function displaySearchResults(searchResults) {
   const searchResultsContainer = document.getElementById('search-results');
@@ -87,7 +126,7 @@ function displayTrailer(videoId) {
 
 // Load in top current trailers at page load
 async function fetchPopularTrailers() {
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=06&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=06&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyA_uglFhReUs61gcPEwXhfwwFsb31sfVhM`;
 
   try {
     const youtubeResponse = await fetch(youtubeUrl);
