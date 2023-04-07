@@ -87,7 +87,7 @@ function displayTrailer(videoId) {
   `;
 }
 
-Load in top current trailers at page load
+// Load in top current trailers at page load
 async function fetchPopularTrailers() {
   const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=official%20trailer&order=viewCount&videoDefinition=high&publishedAfter=2022-01-01T00:00:00Z&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
 
