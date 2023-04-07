@@ -276,16 +276,28 @@ code {
 ul {
   list-style: none;
 }
-@media screen and (max-width: 992px) {
-
-}
-
 
 @media screen and (max-width: 768px) {
-
+  .responsive-iframe {
+    height: 350px;
+    width: 400px;
+  }
+  .trailer-thumbnail {
+    width: 160px;
+    height: 90px;
+  }
 }
 
 
-@media screen and (max-width: 576px) {
- 
+@media screen and (max-width: 320px) {
+  .responsive-iframe {
+    height: 150px;
+    width: 300px;
+  }
+  .trailer-thumbnail {
+    margin: 5px;
+    display: flexbox;
+    width: 120px;
+    height: 67.5px;
+  }
 }

@@ -19,7 +19,7 @@ async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=02&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=04&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
   try {
     const omdbResponse = await fetch(omdbUrl);
     const omdbData = await omdbResponse.json();
@@ -49,9 +49,9 @@ function displaySearchResults(searchResults) {
 
   searchResults.forEach(result => {
     searchResultThumbnails += `
-      <div style="display: inline-block; margin: 5px;">
+      <div style="display: inline-block; margin: 20px;">
         <a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">
-          <img src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}">
+          <img class="trailer-thumbnail" src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}">
           
         </a>
       </div>
@@ -75,7 +75,8 @@ function displayTrailer(videoId) {
   const movieTrailer = document.getElementById('movie-trailer');
   movieTrailer.innerHTML = `
     <h2>Trailer</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="responsive-iframe" width="1200" height="620" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2>Related Videos</h2>
   `;
 }
 
@@ -98,9 +99,9 @@ function displayPopularTrailers(trailers) {
 
   trailers.forEach(trailer => {
     trailerThumbnails += `
-      <div style="display: inline-block; margin: 5px;">
+      <div style="display: inline-block; margin: 20px;">
         <a href="https://www.youtube.com/watch?v=${trailer.id}" target="_blank">
-          <img src="${trailer.snippet.thumbnails.medium.url}" alt="${trailer.snippet.title}">
+          <img class="trailer-thumbnail" src="${trailer.snippet.thumbnails.medium.url}" alt="${trailer.snippet.title}">
         </a>
       </div>
     `;
