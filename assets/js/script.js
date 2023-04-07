@@ -19,7 +19,7 @@ async function searchMovie() {
   const searchInput = document.getElementById('search-input');
   const movieTitle = searchInput.value;
   const omdbUrl = `https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=a23c4e83`;
-  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=04&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
+  const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${encodeURIComponent(movieTitle)}%20trailer&key=AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ`;
   try {
     const omdbResponse = await fetch(omdbUrl);
     const omdbData = await omdbResponse.json();
@@ -64,10 +64,16 @@ function displaySearchResults(searchResults) {
 function displayMovieDetails(movieData) {
   const movieDetails = document.getElementById('movie-details');
   movieDetails.innerHTML = `
-    <h2>${movieData.Title} (${movieData.Year})</h2>
-    <p>Director: ${movieData.Director}</p>
-    <p>Actors: ${movieData.Actors}</p>
-    <p>Plot: ${movieData.Plot}</p>
+    <h2 class= "titles-0" >${movieData.Title} (${movieData.Year})</h2>
+    <p class= "titles-1">
+    <span class= "titles-2">Director:</span> ${movieData.Director}
+    </p>
+    <p class= "titles-1">
+    <span class= "titles-2">Actors:</span> ${movieData.Actors}
+    </p>
+    <p class= "titles-1">
+    <span class= "titles-2">Plot:</span> ${movieData.Plot}
+    </p>
   `;
 }
 
