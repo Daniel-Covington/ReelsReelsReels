@@ -146,7 +146,3 @@ function displayPopularTrailers(trailers) {
 
   trailersContainer.innerHTML = trailerThumbnails;
 }
-
-
-
-
