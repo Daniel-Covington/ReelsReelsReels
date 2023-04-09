@@ -21,8 +21,10 @@
     <title>ReelsReelsReels</title>
   </head>
 
-
-  <body class="grey darken-4 center-align font-1" onload="fetchPopularTrailers()">
+  <body
+    class="grey darken-4 center-align font-1"
+    onload="fetchPopularTrailers()"
+  >
     <div class="row">
       <header class="font-1">
         <h1 class="container center-align accent-4 white-text">
@@ -35,8 +37,10 @@
         class="searchbar"
         type="text"
         id="search-input"
+        list="search-history"
         placeholder="Search for a movie"
       />
+      <datalist id="search-history"></datalist>
     </div>
     <div>
       <button class="glow-on-hover" onclick="searchMovie()">SEARCH</button>
