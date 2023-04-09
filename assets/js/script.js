@@ -1,3 +1,9 @@
+
+// Alternate keys: 
+// Antonine Michels: AIzaSyCNdKmoPLb3EUSKs7B32cynsbitPvNpWTQ
+// Alphonse Johnson: AIzaSyA_uglFhReUs61gcPEwXhfwwFsb31sfVhM
+// Daniel Covington: AIzaSyB5rvZMTGTsNN0LtOiGn_vGJMd1_n7VLV0 
+
 const YouTubeapiKey = 'AIzaSyA_uglFhReUs61gcPEwXhfwwFsb31sfVhM';
 
 // Elements for the Modal Y'all //
