@@ -18,7 +18,7 @@ To set up ReelsReelsReels on your local machine, follow these instructions:
 
 * Clone the repository.
 * Install the required dependencies.
-* Obtain API keys from Obtain [OMDb API](https://www.omdbapi.com/) and [Google APIs](https://developers.google.com/youtube/v3).
+* Obtain API keys from [OMDb API](https://www.omdbapi.com/) and [Google APIs](https://developers.google.com/youtube/v3).
 * Replace the placeholders in the code with your API keys.
 * Open the index.html file in your favorite browser.
 
@@ -31,11 +31,11 @@ To set up ReelsReelsReels on your local machine, follow these instructions:
 * YouTube Data API v3
 
 ## Future Development
-* For the related and popular trailers thumbnails, we would like for it to pass the trailer name from the youtube API to the search function with a click listen event, so it would be processed as if it was a searched trailer that hits omdb api and displays the trailer as the embedded main video.
+* For the related and popular trailer thumbnails, we would like for it to pass the trailer name from the youtube API to the search function with a click listen event, so it would be processed as if it was a searched trailer that hits omdb api and displays trailer/movie details and displays the trailer as the embedded main video.
 
 ##  Links
 
-[Git Page](https://daniel-covington.github.io/ReelsReelsReels/)
+[Git Page Deployment](https://daniel-covington.github.io/ReelsReelsReels/)
 
 [Git Hub](https://github.com/Daniel-Covington/ReelsReelsReels)
 
