@@ -34,7 +34,7 @@ To set up ReelsReelsReels on your local machine, follow these instructions:
 * YouTube Data API v3
 
 ## Future Development
-* For the related and popular trailer thumbnails, we would like for it to pass the trailer name from the youtube API to the search function with a click listen event, so it would be processed as if it was a searched trailer that hits omdb api and displays the trailer as the embedded main video. We would have also like to have used an API that would allow for more search results to expand the functionality of the project.
+* For the related and popular trailer thumbnails, we would like for it to pass the trailer name from the youtube API to the search function with a click listen event, so it would be processed as if it was a searched trailer that hits omdb api and displays trailer/movie details and displays the trailer as the embedded main video.
 
 ##  Links
 
