@@ -22,6 +22,9 @@ To set up ReelsReelsReels on your local machine, follow these instructions:
 * Replace the placeholders in the code with your API keys.
 * Open the index.html file in your favorite browser.
 
+## Issues Encountered
+* API usage of vast amounts of tokens when using the search functions resulting the api shutting down
+* Formatting and design issues not corresponding to intent of design
 
 ## Technologies Used 
 * HTML
